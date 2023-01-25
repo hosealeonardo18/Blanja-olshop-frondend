@@ -11,8 +11,8 @@ const swiper = new Swiper(".slide-content", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-right",
+    prevEl: ".swiper-button-left",
   },
 
   breakpoints: {
@@ -71,8 +71,8 @@ const categories = new Swiper(".slideCategories", {
     el: ".swiper-scrollbar",
   },
   navigation: {
-    nextEl: ".arrow-button-right",
-    prevEl: ".arrow-button-left",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 

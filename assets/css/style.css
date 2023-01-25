@@ -198,6 +198,10 @@ body {
   border-radius: 10px;
 }
 
+#carousel .card-wrapper {
+  z-index: -2;
+}
+
 #carousel .card-image {
   position: relative;
   height: 180px;
@@ -291,6 +295,7 @@ body {
 }
 
 #categories .swiper-wrapper {
+  min-width: 100%;
   z-index: -1;
 }
 /* section product */
@@ -373,35 +378,10 @@ body {
   color: var(--grey);
 }
 
-/* end section product */
+/* ======================== end section product ============================= */
 
-/* footer */
-.footer {
-  padding-top: 20px;
-  padding-bottom: 60px;
-}
+/* ======================= Page Login ================================== */
 
-.footer-link {
-  text-decoration: none;
-  color: var(--grey);
-  font-weight: 400;
-  font-size: 15px;
-  margin-top: 5px;
-}
-
-.title-footer {
-  font-size: 17px;
-}
-
-.footer-link:hover {
-  color: var(--black);
-  font-weight: 500;
-}
-
-/* end footer */
-
-/* Page Login */
-/* ======================================================================================================== */
 #login,
 #register,
 #verif-email {
@@ -519,14 +499,18 @@ span {
   color: var(--grey);
 }
 
-/* end login */
+/* ======================== end login ============================== */
 
-/* page cart */
-/* ======================================================================================================== */
+/* ========================== page cart ============================== */
 
 /* card sub select */
 #cart {
   margin-top: 150px;
+}
+
+#cart .title-categories {
+  font-size: 34px;
+  font-weight: 700;
 }
 
 .card-form-select {
@@ -763,14 +747,15 @@ span {
   list-style: none;
 }
 /* end card product */
-/* end cart */
+/* ========================= end cart ========================== */
 
-/* detail product page */
-/* ========================================================== */
+/* ========================== detail product page =======================  */
+
 .breadcrumb {
   margin-top: 65px;
   margin-bottom: 0;
 }
+
 #detailProduct .card {
   width: 367px;
 }
@@ -1035,7 +1020,7 @@ h5 {
 }
 /* =========== end detail product =============== */
 
-/* ===== checkout ===== */
+/* ================================ checkout ================================== */
 #checkout {
   margin-top: 150px;
 }
@@ -1128,9 +1113,10 @@ h5 {
   background-color: var(--hover-red);
   color: var(--white);
 }
-/* ==== end checkout ==== */
+/* ======================================= end checkout ============================ */
 
-/* ===== profile ====== */
+/* =============================== Sidebar ====================================== */
+/*  profile */
 .btn-profile,
 .wrapper-img-profile {
   height: 32px;
@@ -1198,9 +1184,9 @@ h5 {
   color: var(--white);
 }
 
-/* end sidebar */
+/* ==================================  end sidebar =================================== */
 
-/* main content */
+/* ========================================= main content =================================== */
 .main-content {
   overflow-y: scroll;
   padding: 150px 30px 30px 45px;
@@ -1344,7 +1330,7 @@ h5 {
   border-bottom: 3px solid var(--primary);
 }
 
-/* ==== end ==== profile */
+/* ========================================= end main content Prodfile ========================  */
 
 /* Responsive */
 /* =========================================================================================== */
@@ -1377,6 +1363,12 @@ h5 {
   }
 
   /* end navbar */
+
+  /* categories product home */
+  #categories .swiper-slide {
+    margin-right: 20px;
+  }
+  /* end categories product home */
 
   /* cart page */
   .card-form-product {
@@ -1506,6 +1498,12 @@ h5 {
     width: 100%;
   }
 
+  /* categories product home */
+  #categories .swiper-slide {
+    margin-right: 20px;
+  }
+  /* end categories product home */
+
   /* Page Cart */
   /* =================================================================================== */
   .card-form-product {
@@ -1564,4 +1562,10 @@ h5 {
   .form-control {
     width: 70%;
   }
+
+  /* categories product home */
+  #categories .swiper-slide {
+    margin-right: 20px;
+  }
+  /* end categories product home */
 }
