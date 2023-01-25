@@ -253,6 +253,11 @@ body {
 /* end hero section */
 
 /* categories section */
+#categories .title-categories {
+  font-size: 34px;
+  font-weight: 700;
+}
+
 #categories .slide-container {
   width: 100%;
 }
@@ -285,10 +290,9 @@ body {
   border-radius: 15px;
 }
 
-#categories .swiperCategories {
-  width: 100%;
+#categories .swiper-wrapper {
+  z-index: -1;
 }
-
 /* section product */
 .card {
   height: 278px;
@@ -299,6 +303,10 @@ body {
   box-sizing: border-box;
   box-shadow: 0px 0px 14px 0px rgba(173, 173, 173, 0.25);
   border: none;
+}
+#newProduct .title-categories {
+  font-size: 34px;
+  font-weight: 700;
 }
 
 #newProduct .btn-card-product {
@@ -312,6 +320,12 @@ body {
   height: 136px;
   width: 100%;
   border-radius: 6px 6px 0 0;
+}
+
+/* popular */
+#popular .title-categories {
+  font-size: 34px;
+  font-weight: 700;
 }
 
 #popular .btn-card-product {

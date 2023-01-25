@@ -52,8 +52,8 @@ const swiper = new Swiper(".slide-content", {
 });
 
 
-categories
-const swiperCategories = new Swiper(".slide-content-categories", {
+// categories
+const categories = new Swiper(".slideCategories", {
   slidesPerView: 1,
   centeredSlides: false,
   slidesPerGroupSkip: 1,
@@ -63,20 +63,16 @@ const swiperCategories = new Swiper(".slide-content-categories", {
   },
   breakpoints: {
     769: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+      slidesPerView: 5,
+      slidesPerGroup: 5,
     },
   },
   scrollbar: {
     el: ".swiper-scrollbar",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    nextEl: ".arrow-button-right",
+    prevEl: ".arrow-button-left",
   },
 });
 
