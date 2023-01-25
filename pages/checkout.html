@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blanja Online</title>
+
+    <!-- bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#"><img src="/assets/images/icon/logo.png" alt="" /></a>
+            <a class="navbar-brand" href="">Blanja</a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- form search -->
+            <form class="d-flex ms-5" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-secondary btn-filter" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                  <path
+                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
+                  />
+                </svg>
+              </button>
+            </form>
+            <!-- end form search -->
+
+            <!-- list item -->
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item ms-4">
+                <a class="btn" href=""><img src="/assets/images/icon/cart.png" alt="" /></a>
+              </li>
+              <li class="nav-item ms-4">
+                <a type="button" href="public/auth/Login.html" class="btn btn-login btn-danger">Login</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="btn btn-signup btn-outline-secondary" href="public/auth/Register.html" type="submit">Signup</a>
+              </li>
+            </ul>
+            <!-- end list item -->
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="checkout" class="mb-5">
+      <div class="container">
+        <div class="row">
+          <h2 class="heading">Checkout</h2>
+        </div>
+      </div>
+
+      <section class="">
+        <div class="container">
+          <div class="row mt-4 mb-3">
+            <h5 class="sub-heading">Shipping Address</h5>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 mb-md-4">
+              <div class="card-wrapper align-content-center mb-3">
+                <h5 class="sub-heading mb-3">Andreas Jane</h5>
+                <p class="sub-address">Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
+
+                <button type="button" class="btn btn-address">Choose another address</button>
+              </div>
+
+              <ul class="list-checkouts">
+                <li class="list-checkout mb-3">
+                  <div class="card-wrapper d-flex align-content-center">
+                    <div class="col-lg-10 col-md-10 col-sm-10 d-flex align-content-center">
+                      <div class="wrapper">
+                        <img class="image-wrapper" src="/assets/images/product/gez-xavier-mansfield-b34E1vh1tYU-unsplash 1.png" alt="" />
+                      </div>
+
+                      <div class="wrapper-detail ms-3 mt-2">
+                        <h5 class="product-title mb-0">Men's formal suit - Black</h5>
+                        <span class="sub-title">Zalora Cloth</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 mt-4">
+                      <h5 class="product-title mb-0">$ 20.0</h5>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-wrapper p-4">
+                <h5 class="sub-heading mb-4">Shopping summary</h5>
+
+                <ul class="list-shoppings">
+                  <li class="list-shopping mb-1">
+                    <div class="wrapper-shop d-flex justify-content-between">
+                      <p class="sub-shopping">Order</p>
+                      <span class="price">$ 60.0</span>
+                    </div>
+                  </li>
+                  <li class="list-shopping mb-1">
+                    <div class="wrapper-shop d-flex justify-content-between">
+                      <p class="sub-shopping">Delivery</p>
+                      <span class="price">$ 5.0</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <hr />
+                <div class="total-wrapper d-flex justify-content-between">
+                  <h5 class="sub-heading">Grand Total</h5>
+                  <span class="grand-total fw-bold mb-4">$ 65.0</span>
+                </div>
+
+                <button type="submit" class="btn btn-checkout">Select payment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class=""></section>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

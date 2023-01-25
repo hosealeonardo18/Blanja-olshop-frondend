@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blanja Online</title>
+
+    <!-- bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#"><img src="/assets/images/icon/logo.png" alt="" /></a>
+            <a class="navbar-brand" href="">Blanja</a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- form search -->
+            <form class="d-flex ms-5" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-secondary btn-filter" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                  <path
+                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
+                  />
+                </svg>
+              </button>
+            </form>
+            <!-- end form search -->
+
+            <!-- list item -->
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item ms-4">
+                <a class="btn" href=""><img src="/assets/images/icon/cart.png" alt="" /></a>
+              </li>
+              <li class="nav-item ms-4">
+                <a type="button" href="pages/auth/Login.html" class="btn btn-login btn-danger">Login</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="btn btn-signup btn-outline-secondary" href="pages/auth/Register.html" type="submit">Signup</a>
+              </li>
+            </ul>
+            <!-- end list item -->
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cart">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-lg-12">
+              <h2 class="title fw-bold">My bag</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- side left -->
+            <div class="col-lg-8 col-sm-12">
+              <!-- card sub-->
+              <div class="card-form-select mb-4">
+                <div class="checkbox-wrapper">
+                  <div class="input-group align-items-center">
+                    <div class="input-group-text ms-2">
+                      <input class="form-check-input ms-1" type="checkbox" value="" aria-label="Checkbox for following text input" />
+                    </div>
+
+                    <p class="form-caption ms-2 mt-3">Select all items <span>(2 items selected)</span></p>
+
+                    <a class="form-btn ms-auto" href="">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end card sub -->
+
+              <!-- card cart produk-->
+              <!-- product cart 1 -->
+              <ul class="list-cart">
+                <li class="list-item">
+                  <div class="container">
+                    <div class="row">
+                      <div class="card-form-product d-flex align-items-center mb-2 flex-sm-wrap p-0">
+                        <div class="col-lg-7 col-xl-8 col-md-7 col-sm-12">
+                          <div class="checkbox-wrapper">
+                            <div class="input-group align-items-center">
+                              <div class="input-group-text ms-lg-2 ms-md-2">
+                                <input class="form-check-input ms-1" type="checkbox" value="" aria-label="Checkbox for following text input" />
+                              </div>
+
+                              <div class="img-wrapper ms-2">
+                                <img class="img-product" src="/assets/images/product/gez-xavier-mansfield-b34E1vh1tYU-unsplash 1.png" alt="product-img" />
+                              </div>
+
+                              <div class="content-cart-product d-flex align-items-center ms-2">
+                                <div class="product-title-cart ms-2">
+                                  <p class="product-title fw-bold mb-0">Men's Formal suite - black</p>
+                                  <span class="product-seller">Zalora Cloth</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-3 col-xl-2 col-md-3 col-sm-6 text-sm-end text-md-center text-lg-center">
+                          <div class="product-qty me-sm-4 me-md-0 me-lg-0 me-xl-0">
+                            <button class="decrement btn-mines" href=""><i class="bi bi-dash-lg"></i></button>
+                            <span class="qty ms-2 me-2">1</span>
+                            <button class="increment btn-plus" href=""><i class="bi bi-plus-lg"></i></button>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 text-md-end text-sm-end">
+                          <a class="form-btn-product" href="">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="container">
+                    <div class="row">
+                      <div class="card-form-product d-flex align-items-center mb-2 flex-sm-wrap p-0">
+                        <div class="col-lg-7 col-xl-8 col-md-7 col-sm-12">
+                          <div class="checkbox-wrapper">
+                            <div class="input-group align-items-center">
+                              <div class="input-group-text ms-lg-2 ms-md-2">
+                                <input class="form-check-input ms-1" type="checkbox" value="" aria-label="Checkbox for following text input" />
+                              </div>
+
+                              <div class="img-wrapper ms-2">
+                                <img class="img-product" src="/assets/images/product/gez-xavier-mansfield-b34E1vh1tYU-unsplash 1.png" alt="product-img" />
+                              </div>
+
+                              <div class="content-cart-product d-flex align-items-center ms-2">
+                                <div class="product-title-cart ms-2">
+                                  <p class="product-title fw-bold mb-0">Men's Formal suite - black</p>
+                                  <span class="product-seller">Zalora Cloth</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-3 col-xl-2 col-md-3 col-sm-6 text-sm-end text-md-center text-lg-center">
+                          <div class="product-qty me-sm-4 me-md-0 me-lg-0 me-xl-0">
+                            <button class="decrement btn-mines" href=""><i class="bi bi-dash-lg"></i></button>
+                            <span class="qty ms-2 me-2">1</span>
+                            <button class="increment btn-plus" href=""><i class="bi bi-plus-lg"></i></button>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 text-md-end text-sm-end">
+                          <a class="form-btn-product" href="">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- end product cart 1 -->
+              <!-- end card product -->
+            </div>
+
+            <!-- side right -->
+            <div class="col-lg-4 mt-sm-5 mt-lg-0">
+              <div class="card-form-summary ps-4 pe-4 pt-4 pb-2">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="title-sumarry">Shopping sumarry</h5>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-6">
+                    <p class="text-total">Total Price</p>
+                  </div>
+
+                  <div class="col-6 text-end">
+                    <span class="price fw-bold">$ 40.0</span>
+                  </div>
+                </div>
+
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-login-form">Buy</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
