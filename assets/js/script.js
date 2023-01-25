@@ -11,8 +11,8 @@ const swiper = new Swiper(".slide-content", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-right",
-    prevEl: ".swiper-button-left",
+    nextEl: ".swiper-button-left",
+    prevEl: ".swiper-button-right",
   },
 
   breakpoints: {
