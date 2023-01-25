@@ -16,8 +16,8 @@
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <div class="d-flex align-items-center">
-            <a class="navbar-brand" href="#"><img src="/assets/images/icon/logo.png" alt="" /></a>
-            <a class="navbar-brand" href="">Blanja</a>
+            <a class="navbar-brand" href="../index.html"><img src="/assets/images/icon/logo.png" alt="" /></a>
+            <a class="navbar-brand" href="../index.html">Blanja</a>
           </div>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -356,9 +356,9 @@
 
               <!-- button cta -->
               <div class="button-cta d-flex align-items-center mt-5">
-                <button type="button" class="btn btn-chat me-3">Chat</button>
-                <button type="button" class="btn btn-add me-3">Add Bag</button>
-                <button type="button" class="btn btn-buy">Buy Now</button>
+                <button type="submit" class="btn btn-chat me-3" href="">Chat</button>
+                <button type="submit" class="btn btn-add me-3" onclick="window.location.href='/pages/cart.html'">Add Bag</button>
+                <button type="submit" class="btn btn-buy" onclick="window.location.href='/pages/checkout.html'">Buy Now</button>
               </div>
             </div>
           </div>
@@ -386,6 +386,7 @@
           </div>
         </div>
       </section>
+
       <section class="productReview mt-5">
         <div class="container">
           <div class="row">
@@ -638,5 +639,6 @@
 
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
   </body>
 </html>

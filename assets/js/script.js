@@ -52,31 +52,50 @@ const swiper = new Swiper(".slide-content", {
 });
 
 
-// categories
-// const swiperCategories = new Swiper(".slide-content-categories", {
-//   slidesPerView: 1,
-//   centeredSlides: false,
-//   slidesPerGroupSkip: 1,
-//   grabCursor: true,
-//   keyboard: {
-//     enabled: true,
-//   },
-//   breakpoints: {
-//     769: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 2,
-//     },
-//   },
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next-c",
-//     prevEl: ".swiper-button-prev-c",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+categories
+const swiperCategories = new Swiper(".slide-content-categories", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  slidesPerGroupSkip: 1,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// increment & decrement qty
+const mines = document.querySelector('.decrement');
+const plus = document.querySelector('.increment');
+const qty = document.querySelector('.qty');
+
+let num = 1;
+
+plus.addEventListener("click", () => {
+  num++;
+  console.log(num);
+  qty.innerHTML = num
+});
+
+mines.addEventListener("click", () => {
+  if (num > 1) num--;
+  qty.innerHTML = num
+});
+
 

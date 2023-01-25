@@ -16,8 +16,8 @@
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <div class="d-flex align-items-center">
-            <a class="navbar-brand" href="#"><img src="/assets/images/icon/logo.png" alt="" /></a>
-            <a class="navbar-brand" href="">Blanja</a>
+            <a class="navbar-brand" href="../index.html"><img src="/assets/images/icon/logo.png" alt="" /></a>
+            <a class="navbar-brand" href="../index.html">Blanja</a>
           </div>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,26 +28,174 @@
             <!-- form search -->
             <form class="d-flex ms-5" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-secondary btn-filter" type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                  <path
-                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
-                  />
-                </svg>
-              </button>
             </form>
+
+            <button type="button" class="btn btn-outline-secondary btn-filter" data-bs-toggle="modal" data-bs-target="#filterModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                <path
+                  d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
+                />
+              </svg>
+            </button>
+
+            <div class="modal fade modal-filter" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Filter</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="color mb-3">
+                      <div class="wrapper-modal mb-2">
+                        <span class="title-color mb-3">Color</span>
+                        <div class="color-pallets mt-4">
+                          <ul class="list-colors d-flex align-items-center">
+                            <li class="list-color me-4">
+                              <a class="color active" href="">
+                                <img src="/assets/images/colors/Ellipse 5.png" alt="" />
+                              </a>
+                            </li>
+                            <li class="list-color me-4">
+                              <a class="color" href="">
+                                <img src="/assets/images/colors/Ellipse 6.png" alt="" />
+                              </a>
+                            </li>
+                            <li class="list-color me-4">
+                              <a class="color" href="">
+                                <img src="/assets/images/colors/Ellipse 7.png" alt="" />
+                              </a>
+                            </li>
+                            <li class="list-color me-4">
+                              <a class="color" href="">
+                                <img src="/assets/images/colors/Ellipse 8.png" alt="" />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="wrapper-modal mb-2">
+                        <span class="title-color mb-3">Sizes</span>
+                        <div class="wrapper-size d-flex">
+                          <div class="form-check form-check-inline me-1 mt-4">
+                            <div id="menu-size" class="start-0">
+                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
+                              <label for="size-checkbox" id="size-label">XS</label>
+                            </div>
+                          </div>
+
+                          <div class="form-check mt-4">
+                            <div id="menu-size" class="start-0">
+                              <input type="checkbox" name="size-checkbox" id="size-checkbox" checked />
+                              <label for="size-checkbox" id="size-label">S</label>
+                            </div>
+                          </div>
+
+                          <div class="form-check mt-4">
+                            <div id="menu-size" class="start-0">
+                              <input type="checkbox" name="size-checkbox" id="size-checkbox" checked />
+                              <label for="size-checkbox" id="size-label">M</label>
+                            </div>
+                          </div>
+
+                          <div class="form-check mt-4">
+                            <div id="menu-size" class="start-0">
+                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
+                              <label for="size-checkbox" id="size-label">L</label>
+                            </div>
+                          </div>
+
+                          <div class="form-check mt-4">
+                            <div id="menu-size" class="start-0">
+                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
+                              <label for="size-checkbox" id="size-label">XL</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="wrapper-modal">
+                        <span class="title-color mb-3">Category</span>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-4">
+                              <div class="form-check form-check-inline me-1 mt-4">
+                                <div id="menu-category" class="start-0">
+                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
+                                  <label for="size-checkbox" id="category-label">All</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-4">
+                              <div class="form-check form-check-inline me-1 mt-4">
+                                <div id="menu-category" class="start-0">
+                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
+                                  <label for="size-checkbox" id="category-label">Women</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-4">
+                              <div class="form-check form-check-inline me-1 mt-4">
+                                <div id="menu-category" class="start-0">
+                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
+                                  <label for="size-checkbox" id="category-label">Men</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-4">
+                              <div class="form-check form-check-inline me-1 mt-4">
+                                <div id="menu-category" class="start-0">
+                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
+                                  <label for="size-checkbox" id="category-label">Boys</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-4">
+                              <div class="form-check form-check-inline me-1 mt-4">
+                                <div id="menu-category" class="start-0">
+                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
+                                  <label for="size-checkbox" id="category-label">Girls</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer mt-0">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-filter">Filter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- end form search -->
 
             <!-- list item -->
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
               <li class="nav-item ms-4">
-                <a class="btn" href=""><img src="/assets/images/icon/cart.png" alt="" /></a>
+                <a type="button" class="btn" href="/pages/cart.html"><img src="/assets/images/icon/cart.png" alt="" /></a>
               </li>
               <li class="nav-item ms-4">
-                <a type="button" href="/pages/auth/Login.html" class="btn btn-login btn-danger">Login</a>
+                <a type="button" href="" class="btn"><img src="/assets/images/icon/bell (1) 1.png" alt="" /></a>
               </li>
               <li class="nav-item ms-4">
-                <a class="btn btn-signup btn-outline-secondary" href="/pages/auth/Register.html" type="submit">Signup</a>
+                <a type="button" href="" class="btn"><img src="/assets/images/icon/mail (3) 1.png" alt="" /></a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="btn btn-profile btn-outline-secondary position-relative" href="/pages/profile.html" type="submit">
+                  <div class="wrapper-img-profile position-absolute start-0 top-0">
+                    <img class="profile-img" src="/assets/images/profile/christian-buehner-DItYlc26zVI-unsplash 1.png" alt="" />
+                  </div>
+                </a>
               </li>
             </ul>
             <!-- end list item -->
@@ -204,7 +352,7 @@
       </section>
     </main>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

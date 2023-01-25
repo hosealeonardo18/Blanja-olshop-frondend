@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/100,400,500,700.css');
+@import url('https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/100,400,500,600,700.css');
 
 /* icon */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
@@ -186,6 +186,7 @@ body {
   padding: 20px 0;
   margin: 0;
 }
+
 /* navbar */
 
 /* hero section */
@@ -287,21 +288,6 @@ body {
 #categories .swiperCategories {
   width: 100%;
 }
-
-/* 
-.title {
-  font-size: 34px;
-}
-
-.sub-title {
-  font-weight: 400;
-  font-size: 12px;
-  margin-top: -5px;
-  color: var(--grey);
-}
-*/
-
-/* end categories section */
 
 /* section product */
 .card {
@@ -652,6 +638,20 @@ span {
   background-color: var(--black);
 }
 
+.btn-mines {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--grey);
+}
+
+.btn-mines:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
 .increment {
   width: 36px;
   height: 36px;
@@ -663,6 +663,21 @@ span {
 }
 
 .increment:hover {
+  color: var(--white);
+  background-color: var(--lightGrey);
+}
+
+.btn-plus {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: 0px 0px 4px 0px rgba(142, 142, 142, 0.25);
+}
+
+.btn-plus:hover {
   color: var(--white);
   background-color: var(--lightGrey);
 }
@@ -715,6 +730,12 @@ span {
 }
 
 .qty {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.fromQty {
   font-size: 16px;
   font-weight: 500;
   color: var(--black);
@@ -1179,6 +1200,7 @@ h5 {
   border: 1px solid rgba(155, 155, 155, 1);
   padding: 30px;
   background-color: var(--white);
+  box-sizing: border-box;
 }
 
 .main-content .form-control {
@@ -1247,9 +1269,65 @@ h5 {
   border: none;
 }
 
-.main-content input[type='text'] {
+/* .main-content input[type='text'] {
   width: 220px;
   height: auto;
+} */
+
+/* shipping address */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-content .wrapper-content {
+  padding: 0 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content .wrapper-content-address {
+  box-sizing: border-box;
+  width: 710px;
+  height: 86px;
+  border: 1px dashed var(--grey);
+  border-radius: 8px;
+}
+
+.main-content .wrapper-content-exist {
+  width: 710px;
+  height: 170px;
+
+  padding: 25px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.main-content .aliasname {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-content .btn-change-address {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.main-content th {
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--grey);
+}
+
+.main-content .th-active {
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
 }
 
 /* ==== end ==== profile */
@@ -1296,6 +1374,15 @@ h5 {
   }
 
   .decrement {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--grey);
+  }
+
+  .btn-mines {
     width: 30px;
     height: 30px;
     border: none;
