@@ -21,8 +21,7 @@ const swiper = new Swiper(".slide-content", {
 
     },
     520: {
-      slidesPerView: 2,
-      spaceBetween: 450,
+      slidesPerView: 1,
     },
     768: {
       slidesPerView: 2,
@@ -62,9 +61,35 @@ const categories = new Swiper(".slideCategories", {
     enabled: true,
   },
   breakpoints: {
-    769: {
+    0: {
+      slidesPerView: 1,
+
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 100,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+
+    1200: {
       slidesPerView: 5,
-      slidesPerGroup: 5,
+      spaceBetween: 20,
+    },
+
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 20,
     },
   },
   scrollbar: {
