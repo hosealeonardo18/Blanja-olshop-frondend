@@ -1,7 +1,6 @@
 // carousel trend
 const swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
-  spaceBetween: 180,
   loop: true,
   centerSlide: 'true',
   fade: 'true',
@@ -11,8 +10,8 @@ const swiper = new Swiper(".slide-content", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-left",
-    prevEl: ".swiper-button-right",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   breakpoints: {
@@ -27,9 +26,13 @@ const swiper = new Swiper(".slide-content", {
       slidesPerView: 2,
       spaceBetween: 300,
     },
-    950: {
+    786: {
       slidesPerView: 2,
       spaceBetween: 300,
+    },
+    950: {
+      slidesPerView: 2,
+      spaceBetween: 130,
     },
 
     992: {
@@ -39,12 +42,12 @@ const swiper = new Swiper(".slide-content", {
 
     1200: {
       slidesPerView: 3,
-      spaceBetween: 380,
+      spaceBetween: 300,
     },
 
     1400: {
       slidesPerView: 3,
-      spaceBetween: 200,
+      spaceBetween: 130,
     },
 
   }

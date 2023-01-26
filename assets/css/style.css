@@ -17,6 +17,10 @@
   --success: #2aa952;
 }
 
+.container {
+  padding: 0;
+}
+
 * {
   font-family: 'Metropolis', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;
@@ -191,48 +195,23 @@ body {
 
 /* hero section */
 #carousel {
-  margin-top: 150px;
+  margin-top: 140px;
 }
 
 #carousel .card-carousel {
   border-radius: 10px;
 }
 
-#carousel .card-wrapper {
-  z-index: -2;
-}
-
 #carousel .card-image {
-  position: relative;
-  height: 180px;
   width: 456px;
+  height: 180px;
   border-radius: 15px;
 }
 
 #carousel .card-image .card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 15px;
-}
-
-#carousel .overlay .card-title {
-  color: var(--white);
-  font-size: 32px;
-  font-weight: 700;
-}
-
-#carousel .slide-container {
-  width: 100%;
-}
-
-#carousel .swiper-pagination-bullets {
-  color: var(--grey);
-}
-
-#carousel .swiper-pagination-bullets-active {
-  background-color: var(--grey);
-  opacity: 1;
 }
 
 .arrow-button-left {
@@ -254,7 +233,7 @@ body {
   padding: 0;
 }
 
-/* end hero section */
+/* end Trend section */
 
 /* categories section */
 #categories .title-categories {
@@ -300,7 +279,6 @@ body {
 }
 /* section product */
 .card {
-  height: 278px;
   width: 208px;
   border-radius: 8px;
   margin-right: 25px;
@@ -309,21 +287,22 @@ body {
   box-shadow: 0px 0px 14px 0px rgba(173, 173, 173, 0.25);
   border: none;
 }
+
 #newProduct .title-categories {
   font-size: 34px;
   font-weight: 700;
 }
 
 #newProduct .btn-card-product {
-  height: 278px;
-  width: 208px;
+  width: 100%;
   border-radius: 6px;
   list-style: none;
 }
 
 #newProduct .btn-card-product .card-image {
-  height: 136px;
+  height: 156px;
   width: 100%;
+  object-fit: cover;
   border-radius: 6px 6px 0 0;
 }
 
@@ -334,8 +313,7 @@ body {
 }
 
 #popular .btn-card-product {
-  height: 278px;
-  width: 208px;
+  width: 100%;
   border-radius: 6px;
   list-style: none;
 }
@@ -353,8 +331,8 @@ body {
 }
 
 .card-text {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--primary);
 }
 
@@ -399,13 +377,13 @@ body {
   color: var(--primary);
 }
 
-.nav-link {
-  height: 48px;
-  width: 123px;
-}
-
 .title-text {
   font-size: 18px;
+}
+
+.nav-pills .nav-link {
+  height: 48px;
+  width: 200px;
 }
 
 .nav-item .nav-link {
@@ -441,6 +419,30 @@ body {
   height: 48px;
 }
 
+#register .form-control {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--grey);
+  height: 48px;
+}
+
+#verif-email .form-control {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--grey);
+  height: 48px;
+}
+
+#reset-email .form-control {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--grey);
+  height: 48px;
+}
+
 #resetPassword .form-control {
   width: 100%;
   border-radius: 4px;
@@ -460,12 +462,11 @@ body {
   font-size: 14px;
 }
 
-.btn-login:hover {
-  background-color: var(--red);
+.btn-login-form:hover {
+  background-color: var(--hover-red);
   color: var(--white);
 }
-
-#verif-email .btn-login-form:hover {
+.btn-login:hover {
   background-color: var(--hover-red);
   color: var(--white);
 }
@@ -771,16 +772,22 @@ span {
 
 #detailProduct .card {
   width: 367px;
+  box-shadow: none;
+}
+
+#detailProduct .wrapper-column {
+  padding: 0 0 0 100px;
 }
 
 .card-img-top {
   width: 100%;
   height: 378px;
+  object-fit: cover;
   border-radius: 6px;
 }
 
 .card-body {
-  padding-right: 0;
+  padding: 20px;
 }
 
 .list-thumb {
@@ -802,12 +809,14 @@ span {
 .card-thumb .img-thumb {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 6px;
 }
 
 .title-detail {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .title-store {
@@ -877,7 +886,7 @@ span {
 
 .btn-chat {
   height: 48px;
-  width: 160px;
+  width: 100%;
   border-radius: 24px;
   border: 1px solid var(--black);
   font-size: 14px;
@@ -891,7 +900,7 @@ span {
 }
 .btn-add {
   height: 48px;
-  width: 160px;
+  width: 100%;
   border-radius: 24px;
   border: 1px solid var(--black);
   font-size: 14px;
@@ -905,7 +914,7 @@ span {
 }
 .btn-buy {
   height: 48px;
-  width: 343px;
+  width: 100%;
   border-radius: 25px;
   background-color: var(--primary);
   color: var(--white);
@@ -920,7 +929,7 @@ span {
 
 .title-informasi {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--black);
 }
 
@@ -932,7 +941,7 @@ h5 {
 
 .desc-paragraph {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
   color: var(--grey);
 }
@@ -1027,9 +1036,18 @@ h5 {
 }
 
 .btn-card-product {
-  height: 248px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#detailProduct .card {
   width: 208px;
   border-radius: 8px;
+  margin-right: 25px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 14px 0px rgba(173, 173, 173, 0.25);
+  border: none;
 }
 /* =========== end detail product =============== */
 
@@ -1380,8 +1398,23 @@ h5 {
 
 /* ========================================= end main content Prodfile ========================  */
 
-/* Responsive */
-/* =========================================================================================== */
+/*  ======================= Responsive max 391  =========================== */
+
+@media only screen and (max-width: 391px) {
+  /* ===== login ===== */
+  .nav-pills .nav-link {
+    height: 48px;
+    width: 150px !important;
+  }
+
+  form {
+    padding: 0 !important;
+  }
+}
+
+/*  ======================= End Responsive max 391  =========================== */
+
+/*  ======================= Responsive max 576  =========================== */
 
 @media only screen and (max-width: 576px) {
   /* navbar */
@@ -1472,14 +1505,14 @@ h5 {
     border-radius: 8px 8px 0 0;
   }
 
-  /* .preferensi,
+  .preferensi,
   .description {
     display: none;
-  } */
-
+  }
   /* end detail product */
 
   /* new product */
+
   #newProduct .btn-card-product {
     height: 278px;
     width: 100%;
@@ -1504,7 +1537,6 @@ h5 {
 
   /* popular */
   #popular .btn-card-product {
-    height: 278px;
     width: 100%;
     border-radius: 6px;
     list-style: none;
@@ -1524,9 +1556,46 @@ h5 {
     box-shadow: 0px 0px 14px 0px rgba(173, 173, 173, 0.25);
   }
 
+  #popular .btn-card-product {
+    height: 278px;
+    width: 100%;
+    border-radius: 6px;
+    list-style: none;
+  }
   /* end popular */
+
+  /* ===== login ===== */
+  .nav-pills .nav-link {
+    height: 48px;
+    width: 140px;
+  }
+
+  .nav-pills {
+    margin-top: 0;
+  }
+  /* ====== end login ==== */
+
+  /* ====== register ===== */
+  #register form {
+    padding-top: 0;
+  }
+
+  #register .form-control {
+    width: 100%;
+  }
+  /* ===== end register ===== */
+
+  /* ======== detail product ====== */
+  #detailProduct .title-detail {
+    font-weight: 700;
+    margin-top: 0;
+  }
+  /* ========= end detail ========= */
 }
 
+/*  ======================= End Responsive max 576  =========================== */
+
+/*  ======================= Responsive max 767  =========================== */
 @media only screen and (max-width: 767px) {
   .nav-link {
     height: 48px;
@@ -1584,16 +1653,43 @@ h5 {
 
   /* == detail product == */
   .title-detail {
-    margin-top: 200px;
+    margin-top: 10px;
   }
+
   /* end detail product */
 
   .preferensi,
   .description {
     display: none;
   }
+
+  .card {
+    width: 300px;
+    border-radius: 8px;
+    margin-right: 25px;
+    margin-top: 25px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 14px 0px rgba(173, 173, 173, 0.25);
+    border: none;
+  }
 }
 
+/*  ======================= End Responsive max 767  =========================== */
+
+/*  ======================= Responsive max 950  =========================== */
+
+@media only screen and (max-width: 950px) {
+  /* ===== login & register ====== */
+  .nav-pills .nav-link {
+    height: 48px;
+    width: 152px;
+  }
+  /* ===== end login & register ====== */
+}
+
+/*  ======================= End Responsive max 950  =========================== */
+
+/*  ======================= Responsive max 991  =========================== */
 @media only screen and (max-width: 991px) {
   .container {
     max-width: 90%;
@@ -1616,4 +1712,14 @@ h5 {
     margin-right: 20px;
   }
   /* end categories product home */
+
+  /* ===== login & register ===== */
+  /* .nav-pills .nav-link {
+    height: 48px;
+    width: 250px;
+  } */
+
+  /* ======= end login & resigter ======== */
 }
+
+/*  ======================= End Responsive max 991  =========================== */

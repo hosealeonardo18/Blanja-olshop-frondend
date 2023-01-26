@@ -12,40 +12,48 @@
   </head>
 
   <body>
-    <main>
-      <div class="container pt-3">
-        <div class="row justify-content-center mt-5 text-center">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="align-content-center">
-              <a href="/index.html">
-                <img class="img-logo" src="/assets/images/icon/Group 1158.png" alt="Logo-Blanja" />
-              </a>
+    <main id="reset-email">
+      <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="row vw-100 justify-content-center">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-6 col-xl-4 col-md-8 col-sm-10">
+              <div class="align-content-center">
+                <a href="/index.html">
+                  <img class="img-logo" src="/assets/images/icon/Group 1158.png" alt="Logo-Blanja" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="row justify-content-center mt-5 text-center">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <p class="fw-bold title-text">Reset Password</p>
+          <div class="row justify-content-center text-center mt-3">
+            <div class="col-lg-6 col-xl-4 col-md-8 col-sm-10">
+              <p class="fw-bold title-text">Reset Password</p>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row justify-content-center mt-3 m-1 text-center">
-        <div class="col-lg-4 col-md-6 col-sm-8">
-          <div class="tab-content" id="pills-tabContent">
-            <!-- form confirm email -->
-            <form class="pt-4">
-              <div class="mb-3">
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email" />
+          <div class="row justify-content-center mt-sm-3 text-center">
+            <div class="col-lg-6 col-xl-4 col-md-8 col-sm-10">
+              <!-- tab seller -->
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-Seller" role="tabpanel" aria-labelledby="pills-Seller-tab" tabindex="0">
+                  <form class="pt-sm-2">
+                    <div class="mb-2">
+                      <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email" />
+                    </div>
+
+                    <div class="mb-3 d-flex justify-content-end">
+                      <a class="btn btn-forgot" href="/pages/auth/ResetPassEmail.html">Forgot Password?</a>
+                    </div>
+
+                    <a type="submit" class="btn btn-login-res mb-1" href="/pages/auth/ResetPass.html">Login</a>
+
+                    <div class="d-flex align-items-center mt-3 justify-content-center">
+                      <p class="text">Don't have a Blanja account ? <a href="/pages/auth/Register.html">Register</a></p>
+                    </div>
+                  </form>
+                </div>
               </div>
-
-              <a href="/pages/auth/ResetPass.html" class="btn btn-login-res mt-4">Next Proccess</a>
-
-              <div class="d-flex align-items-center mt-5 justify-content-center">
-                <p class="text">Don't have a Blanja account ? <a href="/pages/auth/Register.html">Register</a></p>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
