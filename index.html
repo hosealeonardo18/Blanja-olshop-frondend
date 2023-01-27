@@ -15,192 +15,197 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <div class="d-flex align-items-center">
-            <a class="navbar-brand" href="../index.html"><img src="/assets/images/icon/logo.png" alt="" /></a>
-            <a class="navbar-brand" href="../index.html">Blanja</a>
-          </div>
+    <div class="container-fluid">
+      <header id="navbar">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+          <div class="container">
+            <a class="navbar-brand me-5" href="index.html">
+              <img src="/assets/images/icon/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top img-fluid" />
+              Blanja
+            </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- form search -->
-            <form class="d-flex ms-5" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            </form>
-
-            <!-- id modal -->
-            <button type="button" class="btn btn-outline-secondary btn-filter" data-bs-toggle="modal" data-bs-target="#filterModal">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                <path
-                  d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
-                />
-              </svg>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="modal fade modal-filter" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Filter</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <form class="" role="search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+              </form>
 
-                  <div class="modal-body">
-                    <div class="color mb-3">
-                      <div class="wrapper-modal mb-2">
-                        <span class="title-color mb-3">Color</span>
-                        <div class="color-pallets mt-4">
-                          <ul class="list-colors d-flex align-items-center">
-                            <li class="list-color me-4">
-                              <a class="color active" href="">
-                                <img src="/assets/images/colors/Ellipse 5.png" alt="" />
-                              </a>
-                            </li>
-                            <li class="list-color me-4">
-                              <a class="color" href="">
-                                <img src="/assets/images/colors/Ellipse 6.png" alt="" />
-                              </a>
-                            </li>
-                            <li class="list-color me-4">
-                              <a class="color" href="">
-                                <img src="/assets/images/colors/Ellipse 7.png" alt="" />
-                              </a>
-                            </li>
-                            <li class="list-color me-4">
-                              <a class="color" href="">
-                                <img src="/assets/images/colors/Ellipse 8.png" alt="" />
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+              <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#filter">
+                <i class="bi bi-funnel"></i>
+              </button>
 
-                      <div class="wrapper-modal mb-2">
-                        <span class="title-color mb-3">Sizes</span>
-                        <div class="wrapper-size d-flex">
-                          <div class="form-check form-check-inline me-1 mt-4">
-                            <div id="menu-size" class="start-0">
-                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
-                              <label for="size-checkbox" id="size-label">XS</label>
-                            </div>
-                          </div>
+              <div class="modal fade" id="filter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="filterLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="filterLabel">Filter</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container mb-1">
+                        <div class="row">
+                          <div class="col-12">
+                            <span class="text-color">Colors</span>
 
-                          <div class="form-check mt-4">
-                            <div id="menu-size" class="start-0">
-                              <input type="checkbox" name="size-checkbox" id="size-checkbox" checked />
-                              <label for="size-checkbox" id="size-label">S</label>
-                            </div>
-                          </div>
+                            <div class="color-pallets d-flex pt-3">
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse 5.png" alt="" />
+                              </button>
 
-                          <div class="form-check mt-4">
-                            <div id="menu-size" class="start-0">
-                              <input type="checkbox" name="size-checkbox" id="size-checkbox" checked />
-                              <label for="size-checkbox" id="size-label">M</label>
-                            </div>
-                          </div>
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse 6.png" alt="" />
+                              </button>
 
-                          <div class="form-check mt-4">
-                            <div id="menu-size" class="start-0">
-                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
-                              <label for="size-checkbox" id="size-label">L</label>
-                            </div>
-                          </div>
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse 7.png" alt="" />
+                              </button>
 
-                          <div class="form-check mt-4">
-                            <div id="menu-size" class="start-0">
-                              <input type="checkbox" name="size-checkbox" id="size-checkbox" />
-                              <label for="size-checkbox" id="size-label">XL</label>
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse 8.png" alt="" />
+                              </button>
+
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse-1.png" alt="" />
+                              </button>
+
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse-2.png" alt="" />
+                              </button>
+
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse-3.png" alt="" />
+                              </button>
+
+                              <button type="button" class="btn btn-color" data-bs-toggle="button">
+                                <img class="color" src="/assets/images/colors/Ellipse.png" alt="" />
+                              </button>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="wrapper-modal">
-                        <span class="title-color mb-3">Category</span>
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-4">
-                              <div class="form-check form-check-inline me-1 mt-4">
-                                <div id="menu-category" class="start-0">
-                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
-                                  <label for="size-checkbox" id="category-label">All</label>
-                                </div>
-                              </div>
-                            </div>
+                      <div class="container mb-1">
+                        <div class="row">
+                          <div class="col-12">
+                            <span class="text-color">Sizes</span>
 
-                            <div class="col-4">
-                              <div class="form-check form-check-inline me-1 mt-4">
-                                <div id="menu-category" class="start-0">
-                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
-                                  <label for="size-checkbox" id="category-label">Women</label>
-                                </div>
-                              </div>
-                            </div>
+                            <div class="size-charts d-flex pt-3">
+                              <button type="button" class="btn btn-size" data-bs-toggle="button">
+                                <span class="text-size text-center">XS</span>
+                              </button>
 
-                            <div class="col-4">
-                              <div class="form-check form-check-inline me-1 mt-4">
-                                <div id="menu-category" class="start-0">
-                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
-                                  <label for="size-checkbox" id="category-label">Men</label>
-                                </div>
-                              </div>
-                            </div>
+                              <button type="button" class="btn btn-size" data-bs-toggle="button">
+                                <span class="text-size text-center">S</span>
+                              </button>
 
-                            <div class="col-4">
-                              <div class="form-check form-check-inline me-1 mt-4">
-                                <div id="menu-category" class="start-0">
-                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
-                                  <label for="size-checkbox" id="category-label">Boys</label>
-                                </div>
-                              </div>
-                            </div>
+                              <button type="button" class="btn btn-size" data-bs-toggle="button">
+                                <span class="text-size text-center">M</span>
+                              </button>
 
-                            <div class="col-4">
-                              <div class="form-check form-check-inline me-1 mt-4">
-                                <div id="menu-category" class="start-0">
-                                  <input type="checkbox" name="size-checkbox" id="category-checkbox" />
-                                  <label for="size-checkbox" id="category-label">Girls</label>
-                                </div>
-                              </div>
+                              <button type="button" class="btn btn-size active" data-bs-toggle="button">
+                                <span class="text-size text-center">L</span>
+                              </button>
+
+                              <button type="button" class="btn btn-size" data-bs-toggle="button">
+                                <span class="text-size text-center">XL</span>
+                              </button>
                             </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container mb-1">
+                        <div class="row">
+                          <span class="text-color">Category</span>
+                          <div class="col-4">
+                            <div class="list-categories d-flex pt-3">
+                              <button type="button" class="btn btn-category" data-bs-toggle="button">
+                                <span class="text-categories text-center">All</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="list-categories d-flex pt-3">
+                              <button type="button" class="btn btn-category" data-bs-toggle="button">
+                                <span class="text-categories text-center">Woman</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="list-categories d-flex pt-3">
+                              <button type="button" class="btn btn-category" data-bs-toggle="button">
+                                <span class="text-categories text-center">Man</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="list-categories d-flex pt-3">
+                              <button type="button" class="btn btn-category" data-bs-toggle="button">
+                                <span class="text-categories text-center">Boys</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="list-categories d-flex pt-3">
+                              <button type="button" class="btn btn-category" data-bs-toggle="button">
+                                <span class="text-categories text-center">Girls</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container mb-1">
+                        <div class="row">
+                          <div class="col-12">
+                            <span class="text-color">Brand</span>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>
+                                <span class="">Adidas Originals, Jack & Jones, S.Oliver</span>
+                              </option>
+                              <option value="1">Adidas Originals</option>
+                              <option value="2">Jack & Jones</option>
+                              <option value="3">S.Olive</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-6">
+                            <button type="button" class="btn btn-discard" data-bs-dismiss="modal">Discard</button>
+                          </div>
+
+                          <div class="col-6">
+                            <button type="button" class="btn btn-apply">Apply</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="modal-footer mt-0">
-                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-filter">Filter</button>
-                  </div>
                 </div>
               </div>
+
+              <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/pages/cart.html"><i class="bi bi-cart2"></i></a>
+                <button type="button" class="btn-login" onclick="window.location.href='/pages/auth/Login.html'">Login</button>
+                <button type="button" class="btn-signup" onclick="window.location.href='/pages/auth/Register.html'">Signup</button>
+              </div>
             </div>
-            <!-- end form search -->
-
-            <!-- list item -->
-            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item ms-4">
-                <a class="btn" href="/pages/cart.html"><img src="/assets/images/icon/cart.png" alt="" /></a>
-              </li>
-              <li class="nav-item ms-4">
-                <a type="button" href="/pages/auth/Login.html" class="btn btn-login btn-danger">Login</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="btn btn-signup btn-outline-secondary" href="/pages/auth/Register.html" type="submit">Signup</a>
-              </li>
-            </ul>
-            <!-- end list item -->
           </div>
-        </div>
-      </nav>
-    </header>
-
+        </nav>
+      </header>
+    </div>
     <main class="mb-5">
       <section id="carousel">
         <div class="container">
