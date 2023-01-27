@@ -205,7 +205,7 @@
     </header>
 
     <main id="checkout" class="mb-5">
-      <div class="container">
+      <div class="container mb-4">
         <div class="row">
           <h2 class="heading">Checkout</h2>
         </div>
@@ -213,7 +213,7 @@
 
       <section class="">
         <div class="container">
-          <div class="row mt-4 mb-3">
+          <div class="row">
             <h5 class="sub-heading">Shipping Address</h5>
           </div>
 
@@ -224,32 +224,154 @@
                 <p class="sub-address">Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
 
                 <!-- modal -->
-                <button type="button" class="btn btn-address" data-bs-toggle="modal" data-bs-target="#anotherAddress">Choose another address</button>
+                <a class="btn btn-address" data-bs-toggle="modal" href="#chooseAnotherAddress" role="button">Choose another address</a>
 
-                <div class="modal fade" id="anotherAddress" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog text-center">
+                <!-- first modal -->
+                <div class="modal fade" id="chooseAnotherAddress" aria-hidden="true" aria-labelledby="chooseAnotherAddressLabel" tabindex="-1">
+                  <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
                         <div class="container">
-                          <h1 class="modal-title fs-5 text-center mb-4" id="staticBackdropLabel">Choose another address</h1>
+                          <div class="row">
+                            <div class="col-12 mb-3">
+                              <h5 class="text-center">Choose another address</h5>
+                            </div>
 
-                          <div class="wrapper-new-address">
-                            <p>Add New Address</p>
+                            <div class="col-12 p-0 mb-3">
+                              <button type="button" class="modal-new-address" data-bs-target="#addNewAddress" data-bs-toggle="modal">Add new address</button>
+                            </div>
+
+                            <div class="col-12 p-0">
+                              <div class="modal-change-address text-start">
+                                <h5 class="sub-heading mb-3">Andreas Jane</h5>
+                                <p class="sub-address-modal">Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
+                                <button type="button" class="btn-change-address">Change Address</button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- modal -->
+                <!-- end first modal -->
+
+                <!-- nested Modal Add new address -->
+                <div class="modal fade" id="addNewAddress" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row mb-3">
+                            <div class="col-12">
+                              <h5 class="text-center">Add new address</h5>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <form>
+                                <div class="mb-3">
+                                  <label for="rumah" class="form-label">Save address as (ex : home address, office address)</label>
+                                  <input type="text" class="form-control" id="rumah" placeholder="Rumah" />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-6">
+                              <form>
+                                <div class="mb-2">
+                                  <label for="recipentsName" class="form-label">Recipient’s name</label>
+                                  <input type="text" class="form-control" id="recipentsName" />
+                                </div>
+                              </form>
+                            </div>
+                            <div class="col-6">
+                              <form>
+                                <div class="mb-2">
+                                  <label for="recipentsNumber" class="form-label">Recipient's number</label>
+                                  <input type="text" class="form-control" id="recipentsNumber" />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-6">
+                              <form>
+                                <div class="mb-2">
+                                  <label for="address" class="form-label">Address</label>
+                                  <input type="text" class="form-control" id="address" />
+                                </div>
+                              </form>
+                            </div>
+                            <div class="col-6">
+                              <form>
+                                <div class="mb-2">
+                                  <label for="postalCode" class="form-label">Postal code</label>
+                                  <input type="text" class="form-control" id="postalCode" />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-6">
+                              <form>
+                                <div class="mb-2">
+                                  <label for="city" class="form-label">City or Subdistrict</label>
+                                  <input type="text" class="form-control" id="city" />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+
+                          <div class="row mt-2">
+                            <div class="col-12 d-flex align-items-center">
+                              <input type="checkbox" class="me-2" />
+                              <span class="desc-checkbox">Make it the primary address</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button class="btn-cancel" data-bs-target="#chooseAnotherAddress" data-bs-toggle="modal">Cancel</button>
+                        <button class="btn-save" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end nested Modal Add new address -->
               </div>
 
               <ul class="list-checkouts">
                 <li class="list-checkout mb-3">
-                  <div class="card-wrapper d-flex align-content-center">
+                  <div class="wrapper-product d-flex align-content-center justify-content-between">
+                    <div class="d-flex align-content-center">
+                      <div class="wrapper-img-checkbox me-3">
+                        <img class="img-cart" src="/assets/images/product/gez-xavier-mansfield-b34E1vh1tYU-unsplash 1.png" alt="" />
+                      </div>
+
+                      <div class="wrapper-desc pt-3">
+                        <h5 class="title-product mb-2">Men's formal suit - Black & White</h5>
+                        <p class="text-seller">Zalora Cloth</p>
+                      </div>
+                    </div>
+
+                    <p class="price mb-0 pt-4 fw-bold">$ 20.0</p>
+                  </div>
+
+                  <!-- <div class="card-wrapper d-flex align-content-center">
                     <div class="col-lg-10 col-md-10 col-sm-10 d-flex align-content-center">
                       <div class="wrapper">
                         <img class="image-wrapper" src="/assets/images/product/gez-xavier-mansfield-b34E1vh1tYU-unsplash 1.png" alt="" />
@@ -261,16 +383,17 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-2 mt-4">
+                    <div class="col-lg-2 mt-4 prices">
                       <h5 class="product-title mb-0">$ 20.0</h5>
                     </div>
-                  </div>
+                  </div> -->
                 </li>
               </ul>
             </div>
+
             <div class="col-lg-4">
               <div class="card-wrapper p-4">
-                <h5 class="sub-heading mb-4">Shopping summary</h5>
+                <h5 class="title-heading mb-4">Shopping summary</h5>
 
                 <ul class="list-shoppings">
                   <li class="list-shopping mb-1">
@@ -293,13 +416,89 @@
                   <span class="grand-total fw-bold mb-4">$ 65.0</span>
                 </div>
 
-                <button type="submit" class="btn btn-checkout">Select payment</button>
+                <button type="submit" class="btn btn-checkout" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#payment">Select payment</button>
+
+                <div class="modal fade" id="payment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="paymentLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="paymentLabel">Payment</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <div class="row container-title">
+                            <h5 class="fw-bold">Payment method</h5>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12 p-0">
+                              <ul class="list-payments mb-1">
+                                <li class="list-payment d-flex justify-content-between">
+                                  <div class="wrapper-payment d-flex align-items-center">
+                                    <img class="icon-payment me-4" src="/assets/images/payment/Logo-GoPay-Vector-CDR-dan-PNG 1.png" alt="gopay" />
+                                    <span class="payment-name">Gopay</span>
+                                  </div>
+
+                                  <input type="checkbox" name="" id="" />
+                                </li>
+
+                                <li class="list-payment d-flex justify-content-between">
+                                  <div class="wrapper-payment d-flex align-items-center">
+                                    <img class="icon-payment me-5" src="/assets/images/payment/kisspng-pos-indonesia-mail-point-of-sale-logo-indonesia-5aeb329c2f74d7 1.png" alt="Pos Indonesia" />
+                                    <span class="payment-name">Pos Indonesia</span>
+                                  </div>
+
+                                  <input type="checkbox" name="" id="" />
+                                </li>
+
+                                <li class="list-payment d-flex justify-content-between">
+                                  <div class="wrapper-payment d-flex align-items-center">
+                                    <img class="icon-payment me-5" src="/assets/images/payment/mastercard.png" alt="mastercard" />
+                                    <span class="payment-name">Master Card</span>
+                                  </div>
+
+                                  <input type="checkbox" name="" id="" />
+                                </li>
+                              </ul>
+
+                              <div class="list-payments">
+                                <div class="container-fluid">
+                                  <div class="row container-title mt-2 mb-2">
+                                    <h5 class="mt-4 fw-bold">Shopping summary</h5>
+                                  </div>
+
+                                  <div class="list-order d-flex justify-content-between">
+                                    <p class="sub-shopping">Order</p>
+                                    <span class="price">$ 60.0</span>
+                                  </div>
+                                  <div class="list-order d-flex justify-content-between">
+                                    <p class="sub-shopping">Delivery</p>
+                                    <span class="price">$ 5.0</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer d-flex justify-content-between">
+                        <div class="wrapper-total">
+                          <h5 class="title-grand fw-bold">Total Payment</h5>
+                          <span class="grand-total-font">$ 45.0</span>
+                        </div>
+                        <button type="button" class="btn-save">Buy</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class=""></section>
     </main>
 
     <script src="/assets/js/script.js"></script>
