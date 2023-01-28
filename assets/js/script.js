@@ -1,6 +1,7 @@
 // carousel trend
 const swiper = new Swiper(".slide-content", {
-  slidesPerView: 3,
+  slidesPerView: 4,
+  spaceBetween: 380,
   loop: true,
   centerSlide: 'true',
   fade: 'true',
@@ -20,34 +21,41 @@ const swiper = new Swiper(".slide-content", {
 
     },
     520: {
-      slidesPerView: 1,
-    },
-    768: {
       slidesPerView: 2,
-      spaceBetween: 300,
-    },
-    786: {
-      slidesPerView: 2,
-      spaceBetween: 300,
-    },
-    950: {
-      slidesPerView: 2,
-      spaceBetween: 130,
+      spaceBetween: 20
     },
 
-    992: {
+    768: {
       slidesPerView: 2,
-      spaceBetween: 65,
+      spaceBetween: 25
+    },
+
+    881: {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
+
+    950: {
+      slidesPerView: 2,
+      spaceBetween: 10
+
+    },
+
+    991: {
+      slidesPerView: 3,
+      spaceBetween: 380
+
     },
 
     1200: {
       slidesPerView: 3,
-      spaceBetween: 300,
+      spaceBetween: 150
+
     },
 
     1400: {
-      slidesPerView: 3,
-      spaceBetween: 130,
+      slidesPerView: 4,
+      spaceBetween: 380,
     },
 
   }
@@ -56,7 +64,8 @@ const swiper = new Swiper(".slide-content", {
 
 // categories
 const categories = new Swiper(".slideCategories", {
-  slidesPerView: 1,
+  slidesPerView: 6,
+  spaceBetween: 5,
   centeredSlides: false,
   slidesPerGroupSkip: 1,
   grabCursor: true,
@@ -65,34 +74,40 @@ const categories = new Swiper(".slideCategories", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      spaceBetween: 10
 
     },
     520: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
+
     768: {
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
+    881: {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
     950: {
       slidesPerView: 4,
-      spaceBetween: 100,
+      spaceBetween: 120,
     },
     992: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 12,
     },
 
     1200: {
       slidesPerView: 5,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
 
     1400: {
-      slidesPerView: 5,
-      spaceBetween: 20,
+      slidesPerView: 6,
+      spaceBetween: 60,
     },
   },
   scrollbar: {
@@ -104,22 +119,23 @@ const categories = new Swiper(".slideCategories", {
   },
 });
 
+
 // increment & decrement qty
-const mines = document.querySelector('.decrement');
-const plus = document.querySelector('.increment');
-const qty = document.querySelector('.qty');
+// const mines = document.querySelector('.decrement');
+// const plus = document.querySelector('.increment');
+// const qty = document.querySelector('.qty');
 
-let num = 1;
+// let num = 1;
 
-plus.addEventListener("click", () => {
-  num++;
-  console.log(num);
-  qty.innerHTML = num
-});
+// plus.addEventListener("click", () => {
+//   num++;
+//   console.log(num);
+//   qty.innerHTML = num
+// });
 
-mines.addEventListener("click", () => {
-  if (num > 1) num--;
-  qty.innerHTML = num
-});
+// mines.addEventListener("click", () => {
+//   if (num > 1) num--;
+//   qty.innerHTML = num
+// });
 
 
