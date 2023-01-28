@@ -78,26 +78,42 @@ const categories = new Swiper(".slideCategories", {
       spaceBetween: 10
 
     },
+
     520: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
 
-    768: {
+    577: {
       slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    678: {
+      slidesPerView: 4,
+      spaceBetween: 130,
+    },
+
+    768: {
+      slidesPerView: 4,
       slidesPerGroup: 3,
     },
     881: {
-      slidesPerView: 2,
-      spaceBetween: 25
+      slidesPerView: 5,
+      spaceBetween: 90
     },
     950: {
       slidesPerView: 4,
       spaceBetween: 120,
     },
     992: {
-      slidesPerView: 4,
-      spaceBetween: 12,
+      slidesPerView: 5,
+      spaceBetween: 60,
     },
 
     1200: {
@@ -107,7 +123,7 @@ const categories = new Swiper(".slideCategories", {
 
     1400: {
       slidesPerView: 6,
-      spaceBetween: 60,
+      spaceBetween: 10,
     },
   },
   scrollbar: {
@@ -121,21 +137,41 @@ const categories = new Swiper(".slideCategories", {
 
 
 // increment & decrement qty
-// const mines = document.querySelector('.decrement');
-// const plus = document.querySelector('.increment');
-// const qty = document.querySelector('.qty');
+// jumlah
+const mines = document.querySelector('.decrement');
+const plus = document.querySelector('.increment');
+const qty = document.querySelector('.qty');
 
-// let num = 1;
+// size
+const btnMines = document.querySelector('.btn-mines');
+const btnPlus = document.querySelector('.btn-plus');
+const btnQty = document.querySelector('.qty-size');
 
-// plus.addEventListener("click", () => {
-//   num++;
-//   console.log(num);
-//   qty.innerHTML = num
-// });
+let num = 1;
 
-// mines.addEventListener("click", () => {
-//   if (num > 1) num--;
-//   qty.innerHTML = num
-// });
+// event jumlah
+plus.addEventListener("click", () => {
+  num++;
+  console.log(num);
+  qty.innerHTML = num
+});
+
+mines.addEventListener("click", () => {
+  if (num > 1) num--;
+  qty.innerHTML = num
+});
+
+
+// event size
+btnPlus.addEventListener("click", () => {
+  num++;
+  console.log(num);
+  btnQty.innerHTML = num
+});
+
+btnMines.addEventListener("click", () => {
+  if (num > 1) num--;
+  btnQty.innerHTML = num
+});
 
 
